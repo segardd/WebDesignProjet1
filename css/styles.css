@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --dark-background-color: #34363a;
+  --dark-font-color: #edf0f5;
+  --caroussel-rect-color: #040488;
+}
+
+body {
+  width: 100%;
+  font-family: "Arvo";
+  background-color: #353942;
+  color: #edf0f5;
+  width: inherit;
+  font-size: calc(0.5vh+2vw);
+  overflow-x: hidden;
+}
+.clearfix {
+  /*overflow:auto;*/
+}
+header {
+  padding: 1% 1% 1% 1%;
+  height: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.header-nav {
+  display: inline-block;
+  text-align: right;
+}
+.header-nav ul {
+  list-style-type: none;
+}
+.header-nav li {
+  display: inline;
+}
+.header-nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+#logo {
+  height: 3em;
+}
+
+main {
+  width: 94vw;
+  background-color: #ffffff;
+  color: #000000;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  margin: auto;
+  overflow-x: hidden;
+  margin: auto;
+}
+#carrousel img {
+  width: 100%;
+  height: auto;
+}
+button#button_carrousel_prev, button#button_carrousel_next {
+  border-width: 0;
+  background-color: transparent;
+  width: 5%;
+  height: auto;
+  display: block;
+}
+svg {
+  height: 100%;
+  width: 100%;
+  fill: none;
+  stroke: grey;
+  stroke-width: 20%;
+  fill-rule: unset;
+}
+button#button_carrousel_next {
+  transform: rotateZ(180deg);
+}
+.card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  align-items: stretch;
+  padding: 0;
+}
+.card {
+  border: #000000 solid 1px;
+  border-radius: 5px;
+  padding: 1em 1em 1em 1em;
+}
+a.info {
+  display: block;
+  width: 50%;
+  margin: auto;
+  background-color: rgb(40, 108, 176);
+  color: #ffffff;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+footer {
+  padding: 2% 1% 2% 1%;
+}
+footer h4#Copyright {
+  text-align: center;
+  width: 100%;
+  margin: auto;
+}

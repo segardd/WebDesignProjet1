@@ -5,15 +5,17 @@
 		<title>Master 2 MIAGE</title>
 		<meta name="description" content="Site web du Master 2 MIAGE">
 		<meta name="author" content="Dominique Dupond">
+		<script src="https://kit.fontawesome.com/25ee05d56e.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
 		<header>
-			<a><img src="./Images/logo.svg" alt="Logo UPJV"></a>
-			<nav>
+			<a href="."><img id="logo" src="./Images/logo.svg" alt="Logo UPJV"></a>
+			<nav class="header-nav">
 				<ul>
 					<li><a href="">Accueil</a></li>
-					<li><a href="">Espaces entrprises</a></li>
+					<li><a href="">Espaces entreprises</a></li>
 					<li><a href="">Espace Presse</a></li>
 					<li><a href="">Contact</a></li>
 				</ul>
@@ -21,7 +23,7 @@
 		</header>
 		<main>
 			<article>
-				<nav>
+				<nav id="carrousel">
 					<ul>
 						<li>
 							<img src="./Images/carousel/image-0.jpg" alt="">
@@ -48,8 +50,18 @@
 					<div id="button_container">
 						<!-- petit boutton générer par js, plus adaptatif si on rajoute des images au carousel -->
 					</div>
-					<button id="button_carrousel_prev" onclick="carouselPrev"></button>
-					<button id="button_carrousel_next" onclick="carouselNext"></button>
+					<button id="button_carrousel_prev" onclick="carouselPrev">
+						<svg "xMidYMid meet"  x="0"   y="0" viewBox="0,0,25,50">
+							<polyline vector-effect="non-scaling-stroke" points="25,5 3,25 25,45" />.
+						  </svg>
+						  
+					</button>
+					<button id="button_carrousel_next" onclick="carouselNext">
+						<svg preserveAspectRatio="none" viewBox="0,0,25,50" >
+							<polyline vector-effect="non-scaling-stroke" points="25,5 3,25 25,45"/>
+						  Sorry, your browser does not support inline SVG.
+						  </svg>
+					</button>
 				</nav>
 			</article>
 			<section>
@@ -58,9 +70,9 @@
 										pastae sunt revertuntur, ita homines instar turbinis degressi montibus impeditis et arduis loca petivere mari confinia, per quae viis latebrosis
 										sese convallibusque occultantes cum appeterent noctes luna etiam tum cornuta.
 				</p>
-				<article>
-					<ul>
-						<li>
+				<article id="">
+					<ul class="card-container">
+						<li class="card">
 							<h1>Objectifs</h1>
 							<p>
 								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
@@ -70,9 +82,9 @@
 																quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
 							</p>
 							<hr>
-							<a href="">+ d'infos</a>
+							<a class="info" href="">+ d'infos</a>
 						</li>
-						<li>
+						<li class="card">
 							<h1>Admission</h1>
 							<p>
 								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
@@ -82,9 +94,9 @@
 								quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
 							</p>
 							<hr>
-							<a href="">+ d'infos</a>
+							<a class="info" href="">+ d'infos</a>
 						</li>
-						<li>
+						<li class="card">
 							<h1>Organisation</h1>
 							<p>
 								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
@@ -94,16 +106,24 @@
 								quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
 							</p>
 							<hr>
-							<a href="">+ d'infos</a>
+							<a class="info" href="">+ d'infos</a>
 						</li>
 					</ul>
 				</article>
 			</section>
+			<script type="text/javascript">
+				var cards= document.querySelectorAll(".card-container li.card");
+				var width = Math.round(90/cards.length);
+				cards.forEach((card)=>{
+					card.style.width= width+"%";
+				})
+				
+			</script>
 		</main>
 		<footer>
-			<h1>
+			<h4 id="Copyright">
 				Copyright © <strong>Master 2 MIAGE</strong> 
-			</h1>
+			</h4>
 		</footer>
 		<script src=""></script>
 	</body>
