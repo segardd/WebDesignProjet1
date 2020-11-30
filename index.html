@@ -5,16 +5,19 @@
 		<title>Master 2 MIAGE</title>
 		<meta name="description" content="Site web du Master 2 MIAGE">
 		<meta name="author" content="Dominique Dupond">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<script src="https://kit.fontawesome.com/25ee05d56e.js" crossorigin="anonymous"></script>
+		<link rel="icon" href="./Images/icons/favicon.ico" />
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
 		<header>
-			<a href="."><img id="logo" src="./Images/logo.svg" alt="Logo UPJV"></a>
+			<a href="."><img id="logo" src="./Images/icons/logo.svg" alt="Logo UPJV"></a>
 			<nav class="header-nav">
+				<div id="button_menu"><img src="./Images/icons/menu.svg" alt="menu"></div>
 				<ul>
-					<li><a href="">Accueil</a></li>
+					<li><a href="./index.html">Accueil</a></li>
 					<li><a href="">Espaces entreprises</a></li>
 					<li><a href="">Espace Presse</a></li>
 					<li><a href="">Contact</a></li>
@@ -22,109 +25,115 @@
 			</nav>
 		</header>
 		<main>
-			<article>
-				<nav id="carrousel">
-					<ul>
-						<li>
-							<img src="./Images/carousel/image-0.jpg" alt="">
-							<div>
-								<h1>Boostez votre avenir!</h1>
-								<h2>Le Master 2 MIAGE vous permet de booster votre avenir.</h2>
-							</div>
-						</li>
-						<li>
-							<img src="./Images/carousel/image-1.jpg" alt="">
-							<div>
-								<h1></h1>
-								<h2></h2>
-							</div>
-						</li>
-						<li>
-							<img src="./Images/carousel/image-2.jpg" alt="">
-							<div>
-								<h1></h1>
-								<h2></h2>
-							</div>
-						</li>
-					</ul>
-					<div id="button_container">
-						<!-- petit boutton générer par js, plus adaptatif si on rajoute des images au carousel -->
-					</div>
-					<button id="button_carrousel_prev" onclick="carouselPrev">
-						<svg "xMidYMid meet"  x="0"   y="0" viewBox="0,0,25,50">
-							<polyline vector-effect="non-scaling-stroke" points="25,5 3,25 25,45" />.
-						  </svg>
-						  
+			<article id="carrousel">
+
+				<ul>
+					<li>
+						<img class="carrousel_photo fade" src="./Images/carousel/image-0.jpg" alt="">
+						<div class="carrousel_text">
+							<h1>Boostez votre avenir!</h1>
+							<p>Le Master 2 MIAGE vous permet de booster votre avenir.</p>
+						</div>
+					</li>
+					<li>
+						<img class="carrousel_photo fade" src="./Images/carousel/image-1.jpg" alt="">
+						<div class="carrousel_text">
+							<h1>Le travail d'équipe !</h1>
+							<p>Vous ne vous sentirez pas seul en Master MIAGE</p>
+						</div>
+					</li>
+					<li>
+						<img class="carrousel_photo fade" src="./Images/carousel/image-2.jpg" alt="">
+						<div class="carrousel_text">
+							<h1>Mangez !</h1>
+							<p>Parce que manger c'est la vie !</p>
+						</div>
+					</li>
+				</ul>
+				<div class="button_container dot_container">
+					<button class="dot"></button>
+					<button class="dot"></button>
+					<button class="dot"></button>
+					<!-- petit boutton générer par js, plus adaptatif si on rajoute des images au carousel -->
+				</div>
+				<div class="button_container arrow_container">
+					<button id="button_carrousel_prev">
+						<img src="./Images/icons/arrow.svg" alt="previous">
 					</button>
-					<button id="button_carrousel_next" onclick="carouselNext">
-						<svg preserveAspectRatio="none" viewBox="0,0,25,50" >
-							<polyline vector-effect="non-scaling-stroke" points="25,5 3,25 25,45"/>
-						  Sorry, your browser does not support inline SVG.
-						  </svg>
+					<button id="button_carrousel_next">
+						<img src="./Images/icons/arrow.svg" alt="next">
 					</button>
-				</nav>
+				</div>
+
 			</article>
 			<section>
 				<h1>Bienvenue !</h1>
-				<p>Bienvenue dans le site du Master 2 MIAGE. Atque, ut Tullius ait, ut etiam ferae fame monitae plerumque ad eum locum ubi ali-quando
-										pastae sunt revertuntur, ita homines instar turbinis degressi montibus impeditis et arduis loca petivere mari confinia, per quae viis latebrosis
-										sese convallibusque occultantes cum appeterent noctes luna etiam tum cornuta.
+				<p>
+					Bienvenue dans le site du Master 2 MIAGE. Atque, ut Tullius ait, ut etiam ferae fame monitae plerumque ad eum locum ubi ali-quando
+															pastae sunt revertuntur, ita homines instar turbinis degressi montibus impeditis et arduis loca petivere mari confinia, per quae viis latebrosis
+															sese convallibusque occultantes cum appeterent noctes luna etiam tum cornuta.
 				</p>
-				<article id="">
+				<article>
 					<ul class="card-container">
 						<li class="card">
-							<h1>Objectifs</h1>
-							<p>
-								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
-																quaedam, non nulla levius Crateras
-																nomine pervenissent, villam scilicet
-																suam quae ab Antiochia vicensimo et
-																quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
-							</p>
+							<div class="card_content">
+								<i class="fas fa-graduation-cap"></i>
+								<h2>Objectifs</h2>
+								<p>
+									Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
+																										quaedam, non nulla levius Crateras
+																										nomine pervenissent, villam scilicet
+																										suam quae ab Antiochia vicensimo et
+																										quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
+								</p>
+							</div>
 							<hr>
 							<a class="info" href="">+ d'infos</a>
+
 						</li>
 						<li class="card">
-							<h1>Admission</h1>
-							<p>
-								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
-								quaedam, non nulla levius Crateras
-								nomine pervenissent, villam scilicet
-								suam quae ab Antiochia vicensimo et
-								quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
-							</p>
+							<div class="card_content">
+								<i class="fas fa-compass"></i>
+								<h2>Admission</h2>
+								<p>
+									Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
+																										quaedam, non nulla levius Crateras
+																										nomine pervenissent, villam scilicet
+																										suam quae ab Antiochia vicensimo et
+																										quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
+								</p>
+							</div>
 							<hr>
 							<a class="info" href="">+ d'infos</a>
+
 						</li>
 						<li class="card">
-							<h1>Organisation</h1>
-							<p>
-								Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
-								quaedam, non nulla levius Crateras
-								nomine pervenissent, villam scilicet
-								suam quae ab Antiochia vicensimo et
-								quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
-							</p>
+							<div class="card_content">
+								<i class="fas fa-calendar-alt"></i>
+								<h2>Organisation</h2>
+								<p>
+									Quaestione igitur per multiplices dilatata fortunas cum ambigerentur
+																										quaedam, non nulla levius Crateras
+																										nomine pervenissent, villam scilicet
+																										suam quae ab Antiochia vicensimo et
+																										quarto disiungitur lapide, ut mandatum est, fractis cruribus occiduntur...
+								</p>
+							</div>
 							<hr>
 							<a class="info" href="">+ d'infos</a>
+
 						</li>
 					</ul>
 				</article>
 			</section>
-			<script type="text/javascript">
-				var cards= document.querySelectorAll(".card-container li.card");
-				var width = Math.round(90/cards.length);
-				cards.forEach((card)=>{
-					card.style.width= width+"%";
-				})
-				
-			</script>
 		</main>
 		<footer>
 			<h4 id="Copyright">
-				Copyright © <strong>Master 2 MIAGE</strong> 
+				Copyright ©
+				<strong>Master 2 MIAGE</strong>
 			</h4>
 		</footer>
-		<script src=""></script>
+		<script src="./js/index.js"></script>
+
 	</body>
 </html>
